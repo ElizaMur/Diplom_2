@@ -1,0 +1,11 @@
+ru/yandex/praktikum/ResponseAuthentication.class
+ru/yandex/praktikum/User.class
+ru/yandex/praktikum/Order.class
+ru/yandex/praktikum/OrderList.class
+ru/yandex/praktikum/UserCredentials.class
+ru/yandex/praktikum/UpdateUserResponse.class
+ru/yandex/praktikum/Ingredients.class
+ru/yandex/praktikum/CreateUserResponse.class
+ru/yandex/praktikum/BaseApiClient.class
+ru/yandex/praktikum/OrderClient.class
+ru/yandex/praktikum/UserClient.class

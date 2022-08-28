@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: GetOrdersTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.391 s <<< FAILURE! - in GetOrdersTest
+getOrdersList(GetOrdersTest)  Time elapsed: 0.189 s  <<< FAILURE!
+java.lang.AssertionError: expected:<200> but was:<429>
+	at GetOrdersTest.getOrdersList(GetOrdersTest.java:41)
+
