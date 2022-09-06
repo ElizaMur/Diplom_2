@@ -1,0 +1,11 @@
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/model/Ingredients.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/model/User.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/model/UpdateUserResponse.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/client/UserClient.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/model/ResponseAuthentication.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/client/BaseApiClient.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/model/UserCredentials.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/client/OrderClient.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/model/CreateUserResponse.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/model/Order.java
+/Users/19542018/Desktop/ddd/Diplom_2/src/main/java/ru/yandex/praktikum/api/model/OrderList.java
