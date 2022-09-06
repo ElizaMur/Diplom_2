@@ -2,18 +2,17 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
-import ru.yandex.praktikum.*;
-
+import ru.yandex.praktikum.api.client.OrderClient;
+import ru.yandex.praktikum.api.client.UserClient;
+import ru.yandex.praktikum.api.model.*;
 import java.util.List;
-
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-import static ru.yandex.praktikum.User.getRandomUser;
+import static ru.yandex.praktikum.api.model.User.getRandomUser;
 
 public class CreateOrderTest {
-
     OrderClient orderClient = new OrderClient();
     Ingredients ingredients = new Ingredients();
     User user = new User();
@@ -92,5 +91,4 @@ public class CreateOrderTest {
         Response responseOrder = orderClient.createOrder(ingredients, accessToken);
         assertEquals(SC_INTERNAL_SERVER_ERROR, responseOrder.statusCode());
     }
-
 }

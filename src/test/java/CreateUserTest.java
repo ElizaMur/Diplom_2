@@ -1,18 +1,18 @@
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
-import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import ru.yandex.praktikum.*;
-
+import ru.yandex.praktikum.api.model.CreateUserResponse;
+import ru.yandex.praktikum.api.model.User;
+import ru.yandex.praktikum.api.client.UserClient;
+import ru.yandex.praktikum.api.model.UserCredentials;
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-import static ru.yandex.praktikum.User.getRandomUser;
-import static ru.yandex.praktikum.UserCredentials.getRandomCourierCredentials;
+import static ru.yandex.praktikum.api.model.User.getRandomUser;
 
 public class CreateUserTest {
     User user;
@@ -77,6 +77,4 @@ public class CreateUserTest {
         assertThat(success, equalTo(false));
         accessToken = responseCreate.body().jsonPath().getString("accessToken").replace("Bearer ", "");
     }
-
-
 }

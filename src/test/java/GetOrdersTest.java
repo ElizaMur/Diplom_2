@@ -2,16 +2,14 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
-import ru.yandex.praktikum.*;
-
-
+import ru.yandex.praktikum.api.client.OrderClient;
+import ru.yandex.praktikum.api.client.UserClient;
+import ru.yandex.praktikum.api.model.*;
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertEquals;
-import static ru.yandex.praktikum.User.getRandomUser;
-
+import static ru.yandex.praktikum.api.model.User.getRandomUser;
 
 public class GetOrdersTest {
     Order order = new Order();
@@ -22,7 +20,6 @@ public class GetOrdersTest {
     Ingredients ingredients = new Ingredients();
     Boolean success;
     String errorMessage;
-
 
     @After
     public void clear() {
@@ -51,6 +48,7 @@ public class GetOrdersTest {
         success = responseGetOrder.body().jsonPath().getBoolean("success");
         assertThat(success, equalTo(true));
     }
+
     @Test
     @DisplayName("Check get list of orders")
     public void getOrdersListWithoutAuth() {

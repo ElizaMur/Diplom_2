@@ -3,15 +3,17 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import ru.yandex.praktikum.*;
-
+import ru.yandex.praktikum.api.model.ResponseAuthentication;
+import ru.yandex.praktikum.api.model.User;
+import ru.yandex.praktikum.api.client.UserClient;
+import ru.yandex.praktikum.api.model.UserCredentials;
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-import static ru.yandex.praktikum.User.getRandomUser;
-import static ru.yandex.praktikum.UserCredentials.getRandomCourierCredentials;
+import static ru.yandex.praktikum.api.model.User.getRandomUser;
+import static ru.yandex.praktikum.api.model.UserCredentials.getRandomCourierCredentials;
 
 public class LoginUserTest {
     User user;
@@ -63,5 +65,4 @@ public class LoginUserTest {
         errorMessage = responseLogin.body().jsonPath().getString("message");
         assertThat(errorMessage, equalTo("email or password are incorrect"));
     }
-
 }
